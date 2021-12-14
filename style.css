@@ -1,0 +1,162 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ecf0f1;
+}
+
+.container {
+  min-width: 50%;
+  max-width: 1000px;
+  margin: 20px;
+  padding: 30px;
+  border-radius: 25px;
+  background-color: #f1c40f;
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+.title,
+.sub-title,
+.combo-title {
+  text-align: center;
+  margin: 1rem;
+  color: #e74c3c;
+}
+
+.title {
+  font-size: 2.5rem;
+}
+
+.sub-title {
+  font-size: 1rem;
+}
+
+.combo-title {
+  font-size: 2rem;
+  margin: 0;
+  display: none;
+}
+
+.combo-title.active {
+  display: block;
+}
+
+.example {
+  text-align: center;
+  color: #ecf0f1;
+  font-style: italic;
+}
+
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  margin: 3rem auto 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+#numbers-count,
+#max-number,
+.combo-number {
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  padding-left: 10px;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50%;
+  color: #e74c3c;
+  background-color: #ecf0f1;
+  font-weight: bold;
+}
+
+.divider {
+  color: #e74c3c;
+  font-size: 3.5rem;
+}
+
+#btn {
+  margin: 2rem 0 0;
+  flex-grow: 1;
+  flex-basis: 100%;
+  height: 4rem;
+  font-size: 2rem;
+  padding: 0.4rem 0.8rem;
+  text-transform: uppercase;
+  font-family: inherit;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #2980b9;
+  color: #ecf0f1;
+}
+
+#btn:hover {
+  background-color: #3498db;
+}
+
+#btn:active {
+  transform: scale(0.97);
+}
+
+.combo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  transition: 300ms ease-in;
+  max-width: 60%;
+}
+
+.combo-number {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0.4rem;
+}
+
+@media screen and (max-width: 1000px) {
+  #btn {
+    font-size: 1.5rem;
+  }
+
+  .input-container {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .input-container {
+    width: 80%;
+  }
+
+  .combo-number {
+    height: 3rem;
+    width: 3rem;
+    font-size: 1rem;
+  }
+}
